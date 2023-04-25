@@ -1,0 +1,245 @@
+{
+  "src/lib/components/WorldcloudComponentDashComponent.react.js": {
+    "description": "Component WordCloud",
+    "displayName": "WorldcloudComponentDashComponent",
+    "methods": [
+      {
+        "name": "getOptions",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "bindEventListeners",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "unbindEventListeners",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "renderWordCloud",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "FallbackUI": {
+        "type": {
+          "name": "element"
+        },
+        "required": false,
+        "description": "If WordCloud is not supported by the browser, this gives the displaying error component",
+        "defaultValue": {
+          "value": "<div>Browser is not supported</div>",
+          "computed": false
+        }
+      },
+      "width": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "number"
+            },
+            {
+              "name": "string"
+            }
+          ]
+        },
+        "required": true,
+        "description": "Width of the canvas"
+      },
+      "height": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "Height of the canvas"
+      },
+      "component": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Component type where the wordcloud will be drawn",
+        "defaultValue": {
+          "value": "'canvas'",
+          "computed": false
+        }
+      },
+      "list": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "custom",
+            "raw": "(props, key, componentName, location, propFullName) => {\r\nconst value = props[key];\r\nif (!value || !Array.isArray(value)) {\r\n    return new Error(\r\n    `Invalid property ${propFullName} supplied to ${componentName}. Expecting it to be an array of [string, number]. Got ${value} instead.`\r\n    );\r\n}\r\n\r\nif (value.length !== 2) {\r\n    return new Error(\r\n    `Invalid property ${propFullName} supplied to ${componentName}. Expecting it to be an array of [string, number]. Got ${value} instead.`\r\n    );\r\n}\r\n\r\nif (typeof value[0] !== 'string' || typeof value[1] !== 'number') {\r\n    return new Error(\r\n    `Invalid property ${propFullName} supplied to ${componentName}. Expecting it to be an array of [string, number]. Got [${typeof value[0]}, ${typeof value[1]}] instead.`\r\n    );\r\n}\r\n}"
+          }
+        },
+        "required": false,
+        "description": "Contains words, or words with user-defined sizes"
+      },
+      "color": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "object"
+            },
+            {
+              "name": "func"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Color assigned"
+      },
+      "shape": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "enum",
+              "value": [
+                {
+                  "value": "'circle'",
+                  "computed": false
+                },
+                {
+                  "value": "'cardioid'",
+                  "computed": false
+                },
+                {
+                  "value": "'diamond'",
+                  "computed": false
+                },
+                {
+                  "value": "'square'",
+                  "computed": false
+                },
+                {
+                  "value": "'triangle'",
+                  "computed": false
+                },
+                {
+                  "value": "'triangle-forward'",
+                  "computed": false
+                },
+                {
+                  "value": "'triangle-upright'",
+                  "computed": false
+                },
+                {
+                  "value": "'pentagon'",
+                  "computed": false
+                },
+                {
+                  "value": "'star'",
+                  "computed": false
+                }
+              ]
+            },
+            {
+              "name": "func"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Shape"
+      },
+      "ellipticity": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "ellipticity"
+      },
+      "minSize": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "minSize"
+      },
+      "weightFactor": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "number"
+            },
+            {
+              "name": "func"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Calculates initial font size"
+      },
+      "fontFamily": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Font family"
+      },
+      "gridSize": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Dimension"
+      },
+      "origin": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "number"
+          }
+        },
+        "required": false,
+        "description": "Dimension"
+      },
+      "drawOutOfBound": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Dimension"
+      },
+      "onStart": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "onStart"
+      },
+      "onWordDrawn": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "onStart"
+      },
+      "onStop": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "onStart"
+      }
+    }
+  }
+}

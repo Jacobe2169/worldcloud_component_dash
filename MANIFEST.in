@@ -1,0 +1,11 @@
+include worldcloud_component_dash_component/worldcloud_component_dash_component.min.js
+include worldcloud_component_dash_component/worldcloud_component_dash_component.min.js.map
+include worldcloud_component_dash_component/async-*.js
+include worldcloud_component_dash_component/async-*.js.map
+include worldcloud_component_dash_component/*-shared.js
+include worldcloud_component_dash_component/*-shared.js.map
+include worldcloud_component_dash_component/metadata.json
+include worldcloud_component_dash_component/package-info.json
+include README.md
+include LICENSE
+include package.json
