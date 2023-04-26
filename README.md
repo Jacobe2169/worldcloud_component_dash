@@ -28,7 +28,7 @@ if __name__ == '__main__':
 ```
 
  4. Run the python script and open your web browser at [http://localhost:8050](http://localhost:80500).
- 5. You shoud see the following :
+ 5. You shoud see the following :<br>
 ![getss](resources/get_started_image.png)
 
 
